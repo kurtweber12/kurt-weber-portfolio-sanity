@@ -1,33 +1,28 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'education',
-  title: 'Education',
+  name: 'courses',
+  title: 'Courses',
   type: 'document',
   fields: [
     defineField({
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+    }),
+    defineField({
+      name: 'code',
+      title: 'Code',
+      type: 'string',
+    }),
+    defineField({
+      name: 'number',
+      title: 'Number',
+      type: 'string',
+    }),
+    defineField({
       name: 'school',
       title: 'School',
-      type: 'string',
-    }),
-    defineField({
-      name: 'degree',
-      title: 'Degree',
-      type: 'string',
-    }),
-    defineField({
-      name: 'graduation',
-      title: 'Graduation',
-      type: 'string',
-    }),
-    defineField({
-      name: 'startdate',
-      title: 'StartDate',
-      type: 'string',
-    }),
-    defineField({
-      name: 'enddate',
-      title: 'EndDate',
       type: 'string',
     }),
     defineField({
@@ -36,16 +31,11 @@ export default defineType({
       type: 'reference',
       to: {type: 'images'},
     }),
-    defineField({
-      name: 'priority',
-      title: 'Priority',
-      type: 'string',
-    }),
   ],
   preview: {
     select: {
-      title: 'school',
-      subtitle: 'degree',
+      title: 'name',
+      subtitle: 'code',
       media: 'imageref.image',
     },
   },
